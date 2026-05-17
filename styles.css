@@ -5,15 +5,15 @@
 }
 
 :root {
-    --primary-color: #4F46E5;
-    --secondary-color: #06B6D4;
-    --accent-color: #F59E0B;
-    --dark-color: #1F2937;
-    --light-color: #F9FAFB;
-    --text-color: #374151;
-    --border-color: #E5E7EB;
-    --success-color: #10B981;
-    --gradient: linear-gradient(135deg, #4F46E5 0%, #06B6D4 100%);
+    --primary-color: #000000;
+    --secondary-color: #333333;
+    --accent-color: #666666;
+    --dark-color: #000000;
+    --light-color: #FFFFFF;
+    --text-color: #333333;
+    --border-color: #E0E0E0;
+    --success-color: #000000;
+    --gradient: linear-gradient(135deg, #000000 0%, #333333 100%);
 }
 
 body {
@@ -51,7 +51,7 @@ body {
     gap: 10px;
     font-size: 1.5rem;
     font-weight: bold;
-    color: var(--primary-color);
+    color: #000000;
 }
 
 .nav-brand i {
@@ -72,7 +72,7 @@ body {
 }
 
 .nav-menu a:hover {
-    color: var(--primary-color);
+    color: #000000;
 }
 
 /* Buttons */
@@ -90,34 +90,35 @@ body {
 }
 
 .btn-primary {
-    background: var(--gradient);
+    background: #000000;
     color: white;
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    background: #333333;
 }
 
 .btn-secondary {
     background: white;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+    color: #000000;
+    border: 2px solid #000000;
 }
 
 .btn-secondary:hover {
-    background: var(--primary-color);
+    background: #000000;
     color: white;
 }
 
 .btn-outline {
     background: transparent;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+    color: #000000;
+    border: 2px solid #000000;
 }
 
 .btn-outline:hover {
-    background: var(--primary-color);
+    background: #000000;
     color: white;
 }
 
@@ -128,7 +129,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background: var(--gradient);
+    background: #000000;
     color: white;
     padding: 100px 0;
     position: relative;
@@ -142,7 +143,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>');
+    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="white" opacity="0.05"/></svg>');
     opacity: 0.3;
 }
 
@@ -189,10 +190,11 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    background: rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.15);
     padding: 10px 20px;
     border-radius: 50px;
     backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
 }
 
 .feature-badge i {
@@ -208,12 +210,13 @@ body {
 
 .floating-card {
     background: white;
-    color: var(--primary-color);
+    color: #000000;
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 20px 60px rgba(0,0,0,0.3);
     text-align: center;
     animation: float 3s ease-in-out infinite;
+    border: 2px solid #000000;
 }
 
 .floating-card i {
@@ -245,7 +248,7 @@ body {
 /* Problems Section */
 .problems {
     padding: 80px 0;
-    background: var(--light-color);
+    background: #FAFAFA;
 }
 
 .problems h2 {
@@ -266,17 +269,19 @@ body {
     padding: 30px;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    border: 2px solid #E0E0E0;
+    transition: all 0.3s;
 }
 
 .problem-card:hover {
     transform: translateY(-10px);
+    border-color: #000000;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 .problem-card i {
     font-size: 3rem;
-    color: var(--primary-color);
+    color: #000000;
     margin-bottom: 1rem;
 }
 
@@ -308,39 +313,42 @@ body {
     background: white;
     padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     text-align: center;
     position: relative;
     transition: all 0.3s;
-    border: 2px solid transparent;
+    border: 2px solid #E0E0E0;
 }
 
 .service-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    border-color: #000000;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
 .service-card.featured {
-    border-color: var(--primary-color);
+    border-color: #000000;
     transform: scale(1.05);
+    background: #000000;
+    color: white;
 }
 
 .service-card .badge {
     position: absolute;
     top: 20px;
     right: 20px;
-    background: var(--accent-color);
-    color: white;
+    background: white;
+    color: #000000;
     padding: 5px 15px;
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 600;
+    border: 1px solid #000000;
 }
 
 .service-icon {
     width: 80px;
     height: 80px;
-    background: var(--gradient);
+    background: #000000;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -351,6 +359,14 @@ body {
 .service-icon i {
     font-size: 2.5rem;
     color: white;
+}
+
+.service-card.featured .service-icon {
+    background: white;
+}
+
+.service-card.featured .service-icon i {
+    color: #000000;
 }
 
 .service-card h3 {
@@ -374,14 +390,23 @@ body {
     display: block;
     font-size: 1.8rem;
     font-weight: bold;
-    color: var(--primary-color);
+    color: #000000;
     margin-top: 1.5rem;
+}
+
+.service-card.featured .price {
+    color: white;
+}
+
+.service-card.featured h3,
+.service-card.featured p {
+    color: white;
 }
 
 /* How It Works */
 .how-it-works {
     padding: 80px 0;
-    background: var(--light-color);
+    background: white;
 }
 
 .how-it-works h2 {
@@ -409,7 +434,7 @@ body {
 .step-number {
     width: 50px;
     height: 50px;
-    background: var(--gradient);
+    background: #000000;
     color: white;
     border-radius: 50%;
     display: flex;
@@ -422,7 +447,7 @@ body {
 
 .step i {
     font-size: 3rem;
-    color: var(--primary-color);
+    color: #000000;
     margin-bottom: 1rem;
 }
 
@@ -434,7 +459,7 @@ body {
 
 .step-arrow {
     font-size: 2rem;
-    color: var(--primary-color);
+    color: #000000;
     font-weight: bold;
 }
 
@@ -460,33 +485,36 @@ body {
     background: white;
     padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     text-align: center;
     position: relative;
-    border: 2px solid transparent;
+    border: 2px solid #E0E0E0;
     transition: all 0.3s;
 }
 
 .pricing-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    border-color: #000000;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
 .pricing-card.featured {
-    border-color: var(--primary-color);
+    border-color: #000000;
     transform: scale(1.05);
+    background: #000000;
+    color: white;
 }
 
 .pricing-card .badge {
     position: absolute;
     top: 20px;
     right: 20px;
-    background: var(--success-color);
-    color: white;
+    background: white;
+    color: #000000;
     padding: 5px 15px;
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: 600;
+    border: 1px solid #000000;
 }
 
 .pricing-card h3 {
@@ -498,13 +526,26 @@ body {
 .price-tag {
     font-size: 3rem;
     font-weight: bold;
-    color: var(--primary-color);
+    color: #000000;
     margin: 1.5rem 0;
 }
 
 .price-tag span {
     font-size: 1.2rem;
-    color: var(--text-color);
+    color: #666666;
+}
+
+.pricing-card.featured .price-tag {
+    color: white;
+}
+
+.pricing-card.featured .price-tag span {
+    color: #E0E0E0;
+}
+
+.pricing-card.featured h3,
+.pricing-card.featured ul li {
+    color: white;
 }
 
 .pricing-card ul {
@@ -519,8 +560,12 @@ body {
 }
 
 .pricing-card ul li i {
-    color: var(--success-color);
+    color: #000000;
     margin-right: 10px;
+}
+
+.pricing-card.featured ul li i {
+    color: white;
 }
 
 .pricing-card button {
@@ -531,7 +576,7 @@ body {
 /* Why Choose Section */
 .why-choose {
     padding: 80px 0;
-    background: var(--light-color);
+    background: #FAFAFA;
 }
 
 .why-choose h2 {
@@ -552,18 +597,19 @@ body {
     padding: 30px;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 2px solid #E0E0E0;
     transition: all 0.3s;
 }
 
 .feature-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    border-color: #000000;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 .feature-item i {
     font-size: 3rem;
-    color: var(--primary-color);
+    color: #000000;
     margin-bottom: 1rem;
 }
 
@@ -595,11 +641,11 @@ body {
     background: white;
     padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 2px solid #E0E0E0;
 }
 
 .stars {
-    color: var(--accent-color);
+    color: #000000;
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
@@ -624,7 +670,7 @@ body {
 /* Contact Section */
 .contact {
     padding: 80px 0;
-    background: var(--light-color);
+    background: white;
 }
 
 .contact h2 {
@@ -654,7 +700,7 @@ body {
 
 .contact-item i {
     font-size: 2rem;
-    color: var(--primary-color);
+    color: #000000;
     margin-top: 5px;
 }
 
@@ -665,10 +711,10 @@ body {
 }
 
 .contact-form {
-    background: white;
+    background: #FAFAFA;
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border: 2px solid #E0E0E0;
 }
 
 .contact-form input,
@@ -686,7 +732,7 @@ body {
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: var(--primary-color);
+    border-color: #000000;
 }
 
 .contact-form button {
@@ -754,7 +800,7 @@ body {
 }
 
 .social-links a:hover {
-    background: var(--primary-color);
+    background: rgba(255,255,255,0.3);
     transform: translateY(-3px);
 }
 
@@ -837,7 +883,7 @@ body {
 }
 
 .close:hover {
-    color: var(--primary-color);
+    color: #000000;
 }
 
 .modal-content h2 {
@@ -872,7 +918,7 @@ body {
 .form-group textarea:focus,
 .form-group select:focus {
     outline: none;
-    border-color: var(--primary-color);
+    border-color: #000000;
 }
 
 .form-row {
@@ -938,6 +984,6 @@ html {
 
 /* Selection */
 ::selection {
-    background: var(--primary-color);
+    background: #000000;
     color: white;
 }
